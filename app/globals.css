@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0d10;
+  --color-card: #12151a;
+  --color-elevated: #191d24;
+  --color-fg: #f5f5f0;
+  --color-fg2: #a1a6b0;
+  --color-muted: #737985;
+  --color-accent: #6c8cff;
+  --color-line: #292e37;
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html { background: #0b0d10; scroll-padding-top: 72px; }
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: rgba(108, 140, 255, 0.35); }
+
+.container-x {
+  max-width: 1296px; /* 1200 + 2*48 */
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+@media (min-width: 640px) { .container-x { padding-inline: 32px; } }
+@media (min-width: 1024px) { .container-x { padding-inline: 48px; } }
+@media (max-width: 359px) { .container-x { padding-inline: 16px; } }
+
+.section-y { padding-block: 56px; }
+@media (min-width: 768px) { .section-y { padding-block: 80px; } }
+@media (min-width: 1280px) { .section-y { padding-block: 110px; } }
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+.h-hero {
+  font-size: 36px; line-height: 1.08; letter-spacing: -0.035em; font-weight: 600;
+}
+@media (max-width: 359px) { .h-hero { font-size: 30px; } }
+@media (min-width: 640px) { .h-hero { font-size: 42px; } }
+@media (min-width: 768px) { .h-hero { font-size: 46px; } }
+@media (min-width: 1024px) { .h-hero { font-size: 52px; } }
+@media (min-width: 1280px) { .h-hero { font-size: 60px; } }
+@media (min-width: 1440px) { .h-hero { font-size: 72px; } }
+@media (min-width: 1920px) { .h-hero { font-size: 76px; } }
+
+/* Sticky About column only when the viewport is tall enough to hold it */
+@media (min-width: 1024px) and (min-height: 700px) {
+  .about-sticky { position: sticky; top: 96px; align-self: start; }
+}
+.h-section {
+  font-size: 30px; line-height: 1.15; letter-spacing: -0.03em; font-weight: 600;
+}
+@media (min-width: 1024px) { .h-section { font-size: 40px; } }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 46px; padding-inline: 22px; border-radius: 10px;
+  font-size: 14px; font-weight: 500;
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease;
+}
+.btn-primary { background: var(--color-accent); color: #0b0d10; }
+.btn-primary:hover { background: #8aa3ff; }
+.btn-ghost { border: 1px solid var(--color-line); color: var(--color-fg); }
+.btn-ghost:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 4px; }
+
+.perspective-root { perspective: 1200px; }
+@media (max-width: 1023px) { .perspective-root { perspective: 900px; } }
+
+@keyframes hero-pulse {
+  0%, 100% { opacity: 0.15; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.75; transform: translate(-50%, -50%) scale(1.5); }
+}
+@keyframes hero-scroll {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(300%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+html { scroll-behavior: smooth; }

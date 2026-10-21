@@ -1,0 +1,158 @@
+[
+  {
+    "slug": "feathers-and-fur",
+    "title": "Feathers & Fur",
+    "demo": "https://feathersandfur.in/",
+    "category": "Website",
+    "description": "Pet shipping service website for hand-raised birds, cats and puppies, with Pan-India delivery from Chennai.",
+    "overview": "A dedicated digital presence for Feathers & Fur, a Chennai-based pet shipping and adoption service. The website allows pet lovers across India to explore hand-raised birds, kittens, and puppies with doorstep delivery, certified health guarantees, and direct WhatsApp customer inquiries.",
+    "features": [
+      "Pan-India live pet shipping booking & inquiries",
+      "Bird, kitten, and puppy catalog showcases",
+      "Direct WhatsApp and call integration for quick support",
+      "Customer reviews and pet delivery tracking details"
+    ],
+    "technologies": ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    "screenshots": [
+      { "url": "/projects/feathers-and-fur/desktop-home.webp", "alt": "Feathers & Fur Homepage", "type": "desktop", "title": "Hero & Pet Selection" },
+      { "url": "/projects/feathers-and-fur/desktop-features.webp", "alt": "Feathers & Fur Services", "type": "desktop", "title": "Services & Delivery Process" },
+      { "url": "/projects/feathers-and-fur/mobile-home.webp", "alt": "Feathers & Fur Mobile View", "type": "mobile", "title": "Mobile Responsive Interface" }
+    ]
+  },
+  {
+    "slug": "dhammam-properties",
+    "title": "Dhammam Properties",
+    "demo": "https://dhammamproperties.com/",
+    "category": "Website",
+    "description": "Property website for finding properties in Tamil Nadu.",
+    "overview": "A real estate portal for Dhammam Properties showcasing residential plots, villas, and commercial land across Tamil Nadu with straightforward inquiry channels, location breakdowns, and verified project details.",
+    "features": [
+      "Property listings with location, area, and pricing specifications",
+      "Lead capture inquiry forms and direct agent contact",
+      "Location maps and accessibility details for prime layouts"
+    ],
+    "technologies": ["WordPress", "Responsive Web Design", "SEO"],
+    "screenshots": [
+      { "url": "/projects/dhammam-properties/desktop-home.webp", "alt": "Dhammam Properties Homepage", "type": "desktop", "title": "Homepage & Featured Properties" },
+      { "url": "/projects/dhammam-properties/desktop-features.webp", "alt": "Dhammam Properties Listings", "type": "desktop", "title": "Property Listings & Details" },
+      { "url": "/projects/dhammam-properties/mobile-home.webp", "alt": "Dhammam Properties Mobile", "type": "mobile", "title": "Mobile Navigation & Inquiry" }
+    ]
+  },
+  {
+    "slug": "zaafrins-mandi",
+    "title": "Zaafrin's Mandi",
+    "demo": "https://zaafrinmandi.netlify.app/",
+    "category": "Website",
+    "description": "Website for a mandi restaurant in Porur, Chennai.",
+    "overview": "An enticing culinary website created for Zaafrin's Mandi in Porur, Chennai. Presents signature Arabian dishes, authentic seating ambience, dining menus, and online ordering or table reservations.",
+    "features": [
+      "Interactive Arabian mandi dining menu",
+      "Ambience and private dining booth showcase",
+      "Google Maps location directions and instant table reservation",
+      "Order via Swiggy/Zomato direct routing"
+    ],
+    "technologies": ["HTML5", "CSS3", "JavaScript", "Netlify"],
+    "screenshots": [
+      { "url": "/projects/zaafrins-mandi/desktop-home.webp", "alt": "Zaafrin's Mandi Homepage", "type": "desktop", "title": "Restaurant Ambience & Headline" },
+      { "url": "/projects/zaafrins-mandi/desktop-features.webp", "alt": "Zaafrin's Mandi Menu", "type": "desktop", "title": "Signature Mandi Menu & Platters" },
+      { "url": "/projects/zaafrins-mandi/mobile-home.webp", "alt": "Zaafrin's Mandi Mobile", "type": "mobile", "title": "Mobile Menu & Contact" }
+    ]
+  },
+  {
+    "slug": "siraj-interiors",
+    "title": "Siraj Interiors",
+    "demo": "https://sirajinterior.netlify.app/",
+    "category": "Website",
+    "description": "Interior design website for homes, offices, villas, apartments and commercial spaces.",
+    "overview": "A portfolio showcase for an interior design studio detailing modular kitchens, living room transformations, office makeovers, and custom cabinetry for residential and commercial clients.",
+    "features": [
+      "High-resolution interior photography portfolio",
+      "Service breakdowns: modular kitchens, living rooms, turnkey execution",
+      "Consultation booking form and client project walkthroughs"
+    ],
+    "technologies": ["HTML5", "Modern CSS", "JavaScript", "Netlify"],
+    "screenshots": [
+      { "url": "/projects/siraj-interiors/desktop-home.webp", "alt": "Siraj Interiors Homepage", "type": "desktop", "title": "Modern Interior Design Hero" },
+      { "url": "/projects/siraj-interiors/desktop-features.webp", "alt": "Siraj Interiors Projects", "type": "desktop", "title": "Residential & Modular Kitchens" },
+      { "url": "/projects/siraj-interiors/mobile-home.webp", "alt": "Siraj Interiors Mobile", "type": "mobile", "title": "Mobile Portfolio Gallery" }
+    ]
+  },
+  {
+    "slug": "makeup-studio-mua",
+    "title": "Makeup Studio MUA",
+    "demo": "https://makeupstudiomua.netlify.app/",
+    "category": "Website",
+    "description": "Website for a bridal makeup artist based in Anna Nagar, Chennai.",
+    "overview": "A refined aesthetic website designed for a bridal makeup studio in Anna Nagar, Chennai. Showcases bridal looks, engagement packages, masterclasses, and an appointment booking flow.",
+    "features": [
+      "Bridal, reception, and pre-wedding makeover galleries",
+      "Service packages and bridal party consultation requests",
+      "Client makeover testimonials and direct WhatsApp consultation"
+    ],
+    "technologies": ["HTML5", "Tailwind CSS", "JavaScript", "Netlify"],
+    "screenshots": [
+      { "url": "/projects/makeup-studio-mua/desktop-home.webp", "alt": "Makeup Studio MUA Homepage", "type": "desktop", "title": "Bridal Artistry & Studio Hero" },
+      { "url": "/projects/makeup-studio-mua/desktop-features.webp", "alt": "Makeup Studio MUA Services", "type": "desktop", "title": "Bridal Packages & Portfolio" },
+      { "url": "/projects/makeup-studio-mua/mobile-home.webp", "alt": "Makeup Studio MUA Mobile", "type": "mobile", "title": "Mobile Bridal Booking View" }
+    ]
+  },
+  {
+    "slug": "apex-epoxy-solutions",
+    "title": "Apex Epoxy Solutions",
+    "demo": "https://apexepoxysolutions.netlify.app/",
+    "category": "Website",
+    "description": "Website for an epoxy flooring contractor covering showroom, commercial, industrial and garage floors.",
+    "overview": "A commercial contractor website highlighting durable epoxy flooring applications for industrial facilities, modern car showrooms, residential garages, and chemical-resistant commercial warehouses.",
+    "features": [
+      "Epoxy flooring types: metallic, flake, industrial self-leveling",
+      "Before-and-after project comparisons and flooring specifications",
+      "Instant site inspection quotation request form"
+    ],
+    "technologies": ["HTML5", "CSS3", "JavaScript", "Netlify"],
+    "screenshots": [
+      { "url": "/projects/apex-epoxy-solutions/desktop-home.webp", "alt": "Apex Epoxy Solutions Homepage", "type": "desktop", "title": "Industrial & Commercial Flooring" },
+      { "url": "/projects/apex-epoxy-solutions/desktop-features.webp", "alt": "Apex Epoxy Solutions Applications", "type": "desktop", "title": "Flake, Metallic & Showroom Finishes" },
+      { "url": "/projects/apex-epoxy-solutions/mobile-home.webp", "alt": "Apex Epoxy Solutions Mobile", "type": "mobile", "title": "Mobile Contractor Quote View" }
+    ]
+  },
+  {
+    "slug": "peakmotion",
+    "title": "PeakMotion",
+    "demo": "https://physio.buildwithsiraj.workers.dev/",
+    "category": "Website",
+    "description": "Website for a physiotherapy clinic in Indiranagar, Bengaluru.",
+    "overview": "A healthcare website for PeakMotion Physiotherapy in Indiranagar, Bengaluru. Centers around sports rehabilitation, post-surgery physical therapy, ergonomics, and seamless appointment booking.",
+    "features": [
+      "Specialty care areas: sports injuries, spinal rehabilitation, orthopedic physio",
+      "Clinic practitioner profiles and credentials",
+      "Online appointment scheduling and patient FAQ"
+    ],
+    "technologies": ["Next.js", "React", "Cloudflare Workers", "Tailwind CSS"],
+    "screenshots": [
+      { "url": "/projects/peakmotion/desktop-home.webp", "alt": "PeakMotion Physiotherapy Homepage", "type": "desktop", "title": "Physiotherapy Clinic & Care Hero" },
+      { "url": "/projects/peakmotion/desktop-features.webp", "alt": "PeakMotion Treatment Programs", "type": "desktop", "title": "Specialized Rehabilitation Programs" },
+      { "url": "/projects/peakmotion/mobile-home.webp", "alt": "PeakMotion Mobile View", "type": "mobile", "title": "Mobile Appointment Interface" }
+    ]
+  },
+  {
+    "slug": "gym-crm",
+    "title": "Gym CRM",
+    "demo": "https://gymcrm.buildwithsiraj.workers.dev/",
+    "category": "Web App",
+    "description": "Gym CRM and management suite covering members, leads pipeline, workout protocols, nutrition and billing.",
+    "overview": "A comprehensive cloud management platform built for gym owners, personal trainers, and fitness studios. Handles member lifecycle tracking, automated follow-up leads pipeline, attendance logging, and recurring subscription fees.",
+    "features": [
+      "Member management directory with subscription status tracking",
+      "Sales pipeline for new membership inquiries and trial passes",
+      "Billing, dues tracking, and automated renewal notifications",
+      "Trainer assignment and workout protocol logging"
+    ],
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Cloudflare Workers"],
+    "screenshots": [
+      { "url": "/projects/gym-crm/manager-cockpit.webp", "alt": "Gym Manager Cockpit Dashboard - Floor metrics & live check-ins", "type": "desktop", "title": "Gym Manager Cockpit" },
+      { "url": "/projects/gym-crm/member-roster.webp", "alt": "Member Roster & CRM - Biometrics, memberships, renewals & payment states", "type": "desktop", "title": "Member Roster & CRM" },
+      { "url": "/projects/gym-crm/coach-portal.webp", "alt": "Master Coach Portal - PT sessions, coaching notes & athlete rosters", "type": "desktop", "title": "Master Coach Portal" },
+      { "url": "/projects/gym-crm/physio-portal.webp", "alt": "Sports Physiotherapist Portal - Clinical assessment, kinetic mobility & rehab cases", "type": "desktop", "title": "Physiotherapist Portal" }
+    ]
+  }
+]
