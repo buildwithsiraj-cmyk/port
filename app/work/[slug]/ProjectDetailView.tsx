@@ -261,13 +261,17 @@ export function ProjectDetailView({
                 </div>
                 <ul className="grid gap-3">
                   {project.features.map((feature, i) => (
-                    <li
+                    <motion.li
                       key={i}
-                      className="flex items-start gap-3 rounded-[12px] border border-[#292E37] bg-[#12151A] p-4 text-[15px] leading-relaxed text-[#A1A6B0]"
+                      initial={{ opacity: 0, y: 14 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-20px" }}
+                      transition={{ duration: 0.4, delay: i * 0.06 }}
+                      className="flex items-start gap-3 rounded-[12px] border border-[#292E37] bg-[#12151A] p-4 text-[15px] leading-relaxed text-[#A1A6B0] transition-colors hover:border-[#6C8CFF]/40"
                     >
                       <CheckCircle2 size={18} className="text-[#6C8CFF] shrink-0 mt-0.5" aria-hidden />
                       <span>{feature}</span>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
@@ -276,13 +280,13 @@ export function ProjectDetailView({
             {/* Technologies & Metadata */}
             <div className={project.features?.length ? "md:col-span-5" : "md:col-span-8"}>
               {project.technologies && project.technologies.length > 0 && (
-                <div className="rounded-[16px] border border-[#292E37] bg-[#12151A] p-6 mb-6">
+                <div className="rounded-[16px] border border-[#292E37] bg-[#12151A] p-6 mb-6 transition-all duration-300 hover:border-accent/40">
                   <h2 className="text-[18px] font-semibold text-[#F5F5F0] mb-4">Technologies &amp; Tools</h2>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1.5 rounded-lg border border-[#292E37] bg-white/[0.02] text-[13.5px] font-medium text-[#F5F5F0]"
+                        className="px-3 py-1.5 rounded-lg border border-[#292E37] bg-white/[0.02] text-[13.5px] font-medium text-[#F5F5F0] transition-all duration-200 hover:border-[#6C8CFF]/50 hover:bg-[#6C8CFF]/10 hover:text-white"
                       >
                         {tech}
                       </span>
@@ -293,7 +297,7 @@ export function ProjectDetailView({
 
               {/* Direct Live Link Banner */}
               {project.demo && (
-                <div className="rounded-[16px] border border-[#6C8CFF]/20 bg-gradient-to-br from-[#6C8CFF]/10 to-transparent p-6">
+                <div className="rounded-[16px] border border-[#6C8CFF]/20 bg-gradient-to-br from-[#6C8CFF]/10 to-transparent p-6 transition-all duration-300 hover:border-accent/40 hover:shadow-[0_12px_32px_-12px_rgba(108,140,255,0.3)]">
                   <p className="label !text-[#6C8CFF] mb-2">Live Deployment</p>
                   <p className="text-[15px] text-[#A1A6B0] mb-4">
                     Experience the production deployment directly in your browser.

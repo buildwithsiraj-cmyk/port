@@ -225,32 +225,32 @@ Looking forward to hearing from you!`;
         </Reveal>
 
         {/* 2-Column Responsive Layout */}
-        <div className="grid gap-8 lg:grid-cols-12 items-start">
+        <div className="grid gap-8 lg:grid-cols-12 items-start w-full min-w-0">
           {/* Left Column: Accordion Sections (All collapsed by default) */}
-          <div className="lg:col-span-8 space-y-3.5">
+          <div className="w-full min-w-0 lg:col-span-8 space-y-3.5">
             {/* 1. PROJECT TYPE */}
-            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200">
+            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200 w-full min-w-0">
               <button
                 type="button"
                 onClick={() => toggleAccordion("project_type")}
-                className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none min-w-0"
                 aria-expanded={activeAccordion === "project_type"}
               >
-                <div className="flex items-center gap-3 min-w-0 pr-3">
+                <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 pr-2">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#6C8CFF]/15 text-[12px] font-mono font-semibold text-[#6C8CFF]">
                     01
                   </span>
-                  <div className="min-w-0">
-                    <h3 className="text-[16px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[15px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
                       Project Type
                     </h3>
-                    <p className="text-[12.5px] text-[#737985] truncate">
+                    <p className="text-[12px] sm:text-[12.5px] text-[#737985] truncate">
                       Format &amp; primary goal of your build
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 shrink-0">
+                <div className="flex items-center gap-2 shrink-0">
                   <span className="hidden sm:inline-flex items-center px-2.5 py-1 rounded-md bg-[#6C8CFF]/10 border border-[#6C8CFF]/30 text-[12px] font-medium text-[#6C8CFF]">
                     {currentTypeName}
                   </span>
@@ -304,28 +304,28 @@ Looking forward to hearing from you!`;
             </div>
 
             {/* 2. PAGES & STRUCTURE */}
-            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200">
+            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200 w-full min-w-0">
               <button
                 type="button"
                 onClick={() => toggleAccordion("pages")}
-                className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none min-w-0"
                 aria-expanded={activeAccordion === "pages"}
               >
-                <div className="flex items-center gap-3 min-w-0 pr-3">
+                <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 pr-2">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#6C8CFF]/15 text-[12px] font-mono font-semibold text-[#6C8CFF]">
                     02
                   </span>
-                  <div className="min-w-0">
-                    <h3 className="text-[16px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[15px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
                       Pages &amp; Structure
                     </h3>
-                    <p className="text-[12.5px] text-[#737985] truncate">
+                    <p className="text-[12px] sm:text-[12.5px] text-[#737985] truncate">
                       Page count volume &amp; required page sections
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 shrink-0">
+                <div className="flex items-center gap-2 shrink-0">
                   <span className="hidden sm:inline-flex items-center px-2.5 py-1 rounded-md bg-[#6C8CFF]/10 border border-[#6C8CFF]/30 text-[12px] font-medium text-[#6C8CFF]">
                     {pageCount} ({selectedPages.length} pages)
                   </span>
@@ -338,14 +338,14 @@ Looking forward to hearing from you!`;
                 </div>
               </button>
 
-              <div className="sm:hidden px-4 pb-3 -mt-1 flex items-center">
+              <div className="sm:hidden px-3.5 sm:px-4 pb-3 -mt-1 flex items-center">
                 <span className="text-[11.5px] text-[#6C8CFF] bg-[#6C8CFF]/10 px-2 py-0.5 rounded">
                   {pageCount} • {selectedPages.length} pages selected
                 </span>
               </div>
 
               {activeAccordion === "pages" && (
-                <div className="border-t border-[#292E37] p-5 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150 space-y-6">
+                <div className="border-t border-[#292E37] p-4 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150 space-y-6">
                   {/* Page count tier */}
                   <div>
                     <label className="block text-[12.5px] font-mono uppercase tracking-wider text-[#A1A6B0] mb-2.5 flex items-center gap-1.5">
@@ -397,15 +397,15 @@ Looking forward to hearing from you!`;
                     </div>
 
                     {/* Add custom page input */}
-                    <form onSubmit={addCustomPage} className="flex gap-2 max-w-[340px]">
+                    <form onSubmit={addCustomPage} className="flex gap-2 max-w-[340px] w-full">
                       <input
                         type="text"
                         placeholder="Add other page (e.g. Case Studies)"
                         value={customPage}
                         onChange={(e) => setCustomPage(e.target.value)}
-                        className="flex-1 bg-[#12151A] border border-[#292E37] rounded-lg px-3 py-2 text-[13px] text-[#F5F5F0] focus:border-[#6C8CFF] focus:outline-none"
+                        className="flex-1 min-w-0 bg-[#12151A] border border-[#292E37] rounded-lg px-3 py-2 text-[13px] text-[#F5F5F0] focus:border-[#6C8CFF] focus:outline-none"
                       />
-                      <button type="submit" className="btn btn-ghost !h-auto !py-2 !px-3 text-[12.5px]">
+                      <button type="submit" className="btn btn-ghost !h-auto !py-2 !px-3 text-[12.5px] shrink-0">
                         + Add
                       </button>
                     </form>
@@ -415,28 +415,28 @@ Looking forward to hearing from you!`;
             </div>
 
             {/* 3. KEY FEATURES */}
-            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200">
+            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200 w-full min-w-0">
               <button
                 type="button"
                 onClick={() => toggleAccordion("features")}
-                className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none min-w-0"
                 aria-expanded={activeAccordion === "features"}
               >
-                <div className="flex items-center gap-3 min-w-0 pr-3">
+                <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 pr-2">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#6C8CFF]/15 text-[12px] font-mono font-semibold text-[#6C8CFF]">
                     03
                   </span>
-                  <div className="min-w-0">
-                    <h3 className="text-[16px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[15px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
                       Key Features
                     </h3>
-                    <p className="text-[12.5px] text-[#737985] truncate">
+                    <p className="text-[12px] sm:text-[12.5px] text-[#737985] truncate">
                       WhatsApp, contact form, login, payments, booking &amp; AI
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 shrink-0">
+                <div className="flex items-center gap-2 shrink-0">
                   <span className="hidden sm:inline-flex items-center px-2.5 py-1 rounded-md bg-[#6C8CFF]/10 border border-[#6C8CFF]/30 text-[12px] font-medium text-[#6C8CFF]">
                     {totalFeaturesCount} features selected
                   </span>
@@ -449,14 +449,14 @@ Looking forward to hearing from you!`;
                 </div>
               </button>
 
-              <div className="sm:hidden px-4 pb-3 -mt-1 flex items-center">
+              <div className="sm:hidden px-3.5 sm:px-4 pb-3 -mt-1 flex items-center">
                 <span className="text-[11.5px] text-[#6C8CFF] bg-[#6C8CFF]/10 px-2 py-0.5 rounded">
                   {totalFeaturesCount} features selected
                 </span>
               </div>
 
               {activeAccordion === "features" && (
-                <div className="border-t border-[#292E37] p-5 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150">
+                <div className="border-t border-[#292E37] p-4 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150">
                   <div className="grid gap-2.5 sm:grid-cols-2 mb-4">
                     {FEATURES.map((f) => {
                       const Icon = f.icon;
@@ -514,28 +514,28 @@ Looking forward to hearing from you!`;
             </div>
 
             {/* 4. DESIGN STYLE & VISUAL TONE */}
-            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200">
+            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200 w-full min-w-0">
               <button
                 type="button"
                 onClick={() => toggleAccordion("design")}
-                className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none min-w-0"
                 aria-expanded={activeAccordion === "design"}
               >
-                <div className="flex items-center gap-3 min-w-0 pr-3">
+                <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 pr-2">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#6C8CFF]/15 text-[12px] font-mono font-semibold text-[#6C8CFF]">
                     04
                   </span>
-                  <div className="min-w-0">
-                    <h3 className="text-[16px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[15px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
                       Design Style
                     </h3>
-                    <p className="text-[12.5px] text-[#737985] truncate">
+                    <p className="text-[12px] sm:text-[12.5px] text-[#737985] truncate">
                       Minimal, corporate, luxury, creative, or dark
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 shrink-0">
+                <div className="flex items-center gap-2 shrink-0">
                   <span className="hidden sm:inline-flex items-center px-2.5 py-1 rounded-md bg-[#6C8CFF]/10 border border-[#6C8CFF]/30 text-[12px] font-medium text-[#6C8CFF]">
                     {currentDesignName}
                   </span>
@@ -548,14 +548,14 @@ Looking forward to hearing from you!`;
                 </div>
               </button>
 
-              <div className="sm:hidden px-4 pb-3 -mt-1 flex items-center">
+              <div className="sm:hidden px-3.5 sm:px-4 pb-3 -mt-1 flex items-center">
                 <span className="text-[11.5px] text-[#6C8CFF] bg-[#6C8CFF]/10 px-2 py-0.5 rounded">
                   {currentDesignName}
                 </span>
               </div>
 
               {activeAccordion === "design" && (
-                <div className="border-t border-[#292E37] p-5 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150">
+                <div className="border-t border-[#292E37] p-4 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150">
                   <div className="grid gap-2.5 sm:grid-cols-2">
                     {DESIGN_STYLES.map((d) => {
                       const isSelected = designStyle === d.id;
@@ -584,28 +584,28 @@ Looking forward to hearing from you!`;
             </div>
 
             {/* 5. INTEGRATIONS */}
-            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200">
+            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200 w-full min-w-0">
               <button
                 type="button"
                 onClick={() => toggleAccordion("integrations")}
-                className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none min-w-0"
                 aria-expanded={activeAccordion === "integrations"}
               >
-                <div className="flex items-center gap-3 min-w-0 pr-3">
+                <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 pr-2">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#6C8CFF]/15 text-[12px] font-mono font-semibold text-[#6C8CFF]">
                     05
                   </span>
-                  <div className="min-w-0">
-                    <h3 className="text-[16px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[15px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
                       Integrations
                     </h3>
-                    <p className="text-[12.5px] text-[#737985] truncate">
+                    <p className="text-[12px] sm:text-[12.5px] text-[#737985] truncate">
                       WhatsApp, email, payment gateways, Supabase &amp; APIs
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 shrink-0">
+                <div className="flex items-center gap-2 shrink-0">
                   <span className="hidden sm:inline-flex items-center px-2.5 py-1 rounded-md bg-[#6C8CFF]/10 border border-[#6C8CFF]/30 text-[12px] font-medium text-[#6C8CFF]">
                     {selectedIntegrations.length} connected
                   </span>
@@ -618,14 +618,14 @@ Looking forward to hearing from you!`;
                 </div>
               </button>
 
-              <div className="sm:hidden px-4 pb-3 -mt-1 flex items-center">
+              <div className="sm:hidden px-3.5 sm:px-4 pb-3 -mt-1 flex items-center">
                 <span className="text-[11.5px] text-[#6C8CFF] bg-[#6C8CFF]/10 px-2 py-0.5 rounded">
                   {selectedIntegrations.length} integrations connected
                 </span>
               </div>
 
               {activeAccordion === "integrations" && (
-                <div className="border-t border-[#292E37] p-5 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150">
+                <div className="border-t border-[#292E37] p-4 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150">
                   <div className="grid gap-2.5 sm:grid-cols-2">
                     {INTEGRATIONS.map((ig) => {
                       const isChecked = selectedIntegrations.includes(ig.id);
@@ -657,28 +657,28 @@ Looking forward to hearing from you!`;
             </div>
 
             {/* 6. BUDGET & TIMELINE */}
-            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200">
+            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200 w-full min-w-0">
               <button
                 type="button"
                 onClick={() => toggleAccordion("budget_timeline")}
-                className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none min-w-0"
                 aria-expanded={activeAccordion === "budget_timeline"}
               >
-                <div className="flex items-center gap-3 min-w-0 pr-3">
+                <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 pr-2">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#6C8CFF]/15 text-[12px] font-mono font-semibold text-[#6C8CFF]">
                     06
                   </span>
-                  <div className="min-w-0">
-                    <h3 className="text-[16px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[15px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
                       Budget &amp; Target Timeline
                     </h3>
-                    <p className="text-[12.5px] text-[#737985] truncate">
+                    <p className="text-[12px] sm:text-[12.5px] text-[#737985] truncate">
                       USD ($) budget ranges &amp; delivery window
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 shrink-0">
+                <div className="flex items-center gap-2 shrink-0">
                   <span className="hidden sm:inline-flex items-center px-2.5 py-1 rounded-md bg-[#22d3ee]/10 border border-[#22d3ee]/30 text-[12px] font-semibold text-[#22d3ee]">
                     {budget} • {timeline}
                   </span>
@@ -691,14 +691,14 @@ Looking forward to hearing from you!`;
                 </div>
               </button>
 
-              <div className="sm:hidden px-4 pb-3 -mt-1 flex items-center">
+              <div className="sm:hidden px-3.5 sm:px-4 pb-3 -mt-1 flex items-center">
                 <span className="text-[11.5px] text-[#22d3ee] bg-[#22d3ee]/10 px-2 py-0.5 rounded font-medium">
                   {budget} • {timeline}
                 </span>
               </div>
 
               {activeAccordion === "budget_timeline" && (
-                <div className="border-t border-[#292E37] p-5 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150 space-y-6">
+                <div className="border-t border-[#292E37] p-4 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150 space-y-6">
                   {/* Budget options */}
                   <div>
                     <label className="block text-[12.5px] font-mono uppercase tracking-wider text-[#A1A6B0] mb-3 flex items-center gap-1.5">
@@ -755,28 +755,28 @@ Looking forward to hearing from you!`;
             </div>
 
             {/* 7. CONTACT DETAILS */}
-            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200">
+            <div className="rounded-[14px] border border-[#292E37] bg-[#12151A] overflow-hidden transition-all duration-200 w-full min-w-0">
               <button
                 type="button"
                 onClick={() => toggleAccordion("contact_details")}
-                className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none"
+                className="w-full flex items-center justify-between p-3.5 sm:p-5 text-left hover:bg-[#161a22] transition-colors focus:outline-none min-w-0"
                 aria-expanded={activeAccordion === "contact_details"}
               >
-                <div className="flex items-center gap-3 min-w-0 pr-3">
+                <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 pr-2">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#6C8CFF]/15 text-[12px] font-mono font-semibold text-[#6C8CFF]">
                     07
                   </span>
-                  <div className="min-w-0">
-                    <h3 className="text-[16px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[15px] sm:text-[17px] font-semibold text-[#F5F5F0] truncate">
                       Contact Details &amp; Notes
                     </h3>
-                    <p className="text-[12.5px] text-[#737985] truncate">
+                    <p className="text-[12px] sm:text-[12.5px] text-[#737985] truncate">
                       Name, business name, and phone number
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 shrink-0">
+                <div className="flex items-center gap-2 shrink-0">
                   <span className="hidden sm:inline-flex items-center px-2.5 py-1 rounded-md bg-[#6C8CFF]/10 border border-[#6C8CFF]/30 text-[12px] font-medium text-[#6C8CFF]">
                     {name ? name : "Optional info"}
                   </span>
@@ -789,14 +789,14 @@ Looking forward to hearing from you!`;
                 </div>
               </button>
 
-              <div className="sm:hidden px-4 pb-3 -mt-1 flex items-center">
+              <div className="sm:hidden px-3.5 sm:px-4 pb-3 -mt-1 flex items-center">
                 <span className="text-[11.5px] text-[#737985]">
                   {name ? `Client: ${name}` : "Tap to add contact details (optional)"}
                 </span>
               </div>
 
               {activeAccordion === "contact_details" && (
-                <div className="border-t border-[#292E37] p-5 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150">
+                <div className="border-t border-[#292E37] p-4 sm:p-6 bg-[#0E1116]/60 animate-in fade-in duration-150">
                   <div className="grid gap-3.5 sm:grid-cols-3 mb-4">
                     <div>
                       <label className="block text-[12px] font-mono uppercase text-[#A1A6B0] mb-1.5 flex items-center gap-1">
@@ -854,8 +854,8 @@ Looking forward to hearing from you!`;
           </div>
 
           {/* Right Column: Live Project Summary & Send on WhatsApp */}
-          <div className="lg:col-span-4 lg:sticky lg:top-24 space-y-4">
-            <div className="rounded-[16px] border border-[#6C8CFF]/30 bg-[#12151A] p-5 sm:p-6 shadow-xl relative overflow-hidden">
+          <div className="w-full min-w-0 lg:col-span-4 lg:sticky lg:top-24 space-y-4">
+            <div className="rounded-[16px] border border-[#6C8CFF]/30 bg-[#12151A] p-4 sm:p-6 shadow-xl relative overflow-hidden w-full min-w-0">
               <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#6C8CFF] via-[#22d3ee] to-[#6C8CFF]" />
 
               {/* Summary Header: Clickable to toggle on mobile */}
@@ -926,7 +926,7 @@ Looking forward to hearing from you!`;
                 <button
                   type="button"
                   onClick={handleSendWhatsApp}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-[12px] bg-[#25D366] text-[#0B0D10] font-semibold text-[14.5px] hover:bg-[#20ba59] transition-all shadow-[0_8px_24px_-8px_rgba(37,211,102,0.45)] hover:shadow-[0_12px_32px_-8px_rgba(37,211,102,0.6)] cursor-pointer"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-[12px] bg-[#25D366] text-[#0B0D10] font-semibold text-[14.5px] hover:bg-[#20ba59] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all shadow-[0_8px_24px_-8px_rgba(37,211,102,0.45)] hover:shadow-[0_12px_32px_-8px_rgba(37,211,102,0.6)] cursor-pointer"
                 >
                   <Send size={15} />
                   <span>Send on WhatsApp</span>

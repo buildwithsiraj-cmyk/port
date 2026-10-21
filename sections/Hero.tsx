@@ -6,6 +6,7 @@ import { useReducedMotionSafe } from "@/lib/useReducedMotionSafe";
 import { registerGsap, MQ } from "@/lib/animations/gsap";
 import { portfolio } from "@/data/portfolio";
 import { HeroPortrait } from "@/components/HeroPortrait";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 
 const EASE_OUT = [0.22, 1, 0.36, 1] as const;
 
@@ -155,8 +156,8 @@ export function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-[32%] bg-gradient-to-b from-transparent to-bg" />
       </motion.div>
 
-      <div className="container-x relative grid w-full items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
-        <div ref={content} className="will-change-transform">
+      <div className="container-x relative grid w-full min-w-0 items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+        <div ref={content} className="will-change-transform min-w-0 w-full">
           <motion.div {...item(0.2)} className="inline-flex items-center gap-2 rounded-full border border-line bg-card/60 px-3.5 py-1.5 backdrop-blur-md mb-6">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
@@ -203,19 +204,23 @@ export function Hero() {
           {/* Quick metric highlights */}
           <motion.div
             {...item(1.15)}
-            className="mt-10 grid grid-cols-3 gap-4 border-t border-line/60 pt-6 max-w-[500px]"
+            className="mt-10 grid grid-cols-3 gap-2 sm:gap-4 border-t border-line/60 pt-6 max-w-[500px] w-full min-w-0"
           >
             <div>
-              <div className="font-mono text-xl sm:text-2xl font-bold text-fg">8+</div>
-              <div className="text-[12px] text-muted">Production Apps</div>
+              <div className="font-mono text-lg sm:text-2xl font-bold text-fg">
+                <AnimatedCounter target={8} suffix="+" />
+              </div>
+              <div className="text-[11px] sm:text-[12px] text-muted leading-tight mt-0.5">Production Apps</div>
             </div>
             <div>
-              <div className="font-mono text-xl sm:text-2xl font-bold text-accent">100%</div>
-              <div className="text-[12px] text-muted">Client Satisfaction</div>
+              <div className="font-mono text-lg sm:text-2xl font-bold text-accent">
+                <AnimatedCounter target={100} suffix="%" />
+              </div>
+              <div className="text-[11px] sm:text-[12px] text-muted leading-tight mt-0.5">Client Satisfaction</div>
             </div>
             <div>
-              <div className="font-mono text-xl sm:text-2xl font-bold text-fg">Full-Stack</div>
-              <div className="text-[12px] text-muted">AI & Automation</div>
+              <div className="font-mono text-lg sm:text-2xl font-bold text-fg">Full-Stack</div>
+              <div className="text-[11px] sm:text-[12px] text-muted leading-tight mt-0.5">AI & Automation</div>
             </div>
           </motion.div>
         </div>
@@ -225,54 +230,66 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 24, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.85, delay: 0.45 * base, ease: EASE_OUT }}
-          className="relative flex flex-col gap-3.5"
+          className="relative flex flex-col gap-3.5 w-full min-w-0"
         >
           {/* Ambient card glow */}
           <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-accent/20 to-purple-500/10 opacity-50 blur-xl pointer-events-none" />
 
           {/* Card 1: Core Competency HUD */}
-          <div className="relative rounded-xl border border-line/80 bg-card/80 p-5 backdrop-blur-xl shadow-2xl transition-all duration-300 hover:border-accent/40">
+          <div className="group relative rounded-xl border border-line/80 bg-card/80 p-4 sm:p-5 backdrop-blur-xl shadow-2xl transition-all duration-300 hover:border-accent/50 hover:shadow-[0_16px_36px_-16px_rgba(108,140,255,0.25)] w-full min-w-0">
             <div className="flex items-center justify-between border-b border-line/60 pb-3 mb-3.5">
               <div className="flex items-center gap-2">
-                <span className="flex h-2 w-2 rounded-full bg-accent" />
+                <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse" />
                 <span className="font-mono text-[11px] uppercase tracking-wider text-muted">
                   Technical Architecture
                 </span>
               </div>
-              <span className="rounded bg-elevated px-2 py-0.5 font-mono text-[10px] text-accent">
+              <span className="rounded bg-elevated px-2 py-0.5 font-mono text-[10px] text-accent border border-accent/20">
                 ACTIVE STACK
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-2.5">
-              <div className="rounded-lg border border-line/50 bg-elevated/60 p-3">
-                <div className="font-mono text-[11px] text-accent font-medium">Gen AI & Agents</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <div className="rounded-lg border border-line/50 bg-elevated/60 p-3 min-w-0 transition-all duration-200 hover:border-accent/40 hover:bg-elevated/90 hover:-translate-y-0.5">
+                <div className="font-mono text-[11px] text-accent font-medium flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent/70" />
+                  Gen AI & Agents
+                </div>
                 <div className="mt-1 text-[12px] text-fg2 leading-snug">LLMs · RAG · Automated Workflows</div>
               </div>
-              <div className="rounded-lg border border-line/50 bg-elevated/60 p-3">
-                <div className="font-mono text-[11px] text-accent font-medium">Full Stack Web</div>
+              <div className="rounded-lg border border-line/50 bg-elevated/60 p-3 min-w-0 transition-all duration-200 hover:border-accent/40 hover:bg-elevated/90 hover:-translate-y-0.5">
+                <div className="font-mono text-[11px] text-accent font-medium flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent/70" />
+                  Full Stack Web
+                </div>
                 <div className="mt-1 text-[12px] text-fg2 leading-snug">Next.js · React · TypeScript · Node</div>
               </div>
-              <div className="rounded-lg border border-line/50 bg-elevated/60 p-3">
-                <div className="font-mono text-[11px] text-accent font-medium">Data & Pipelines</div>
+              <div className="rounded-lg border border-line/50 bg-elevated/60 p-3 min-w-0 transition-all duration-200 hover:border-accent/40 hover:bg-elevated/90 hover:-translate-y-0.5">
+                <div className="font-mono text-[11px] text-accent font-medium flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent/70" />
+                  Data & Pipelines
+                </div>
                 <div className="mt-1 text-[12px] text-fg2 leading-snug">Python · ETL · APIs · Scalable DBs</div>
               </div>
-              <div className="rounded-lg border border-line/50 bg-elevated/60 p-3">
-                <div className="font-mono text-[11px] text-accent font-medium">Business Automation</div>
+              <div className="rounded-lg border border-line/50 bg-elevated/60 p-3 min-w-0 transition-all duration-200 hover:border-accent/40 hover:bg-elevated/90 hover:-translate-y-0.5">
+                <div className="font-mono text-[11px] text-accent font-medium flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent/70" />
+                  Business Automation
+                </div>
                 <div className="mt-1 text-[12px] text-fg2 leading-snug">CRMs · WhatsApp Bot · Webhooks</div>
               </div>
             </div>
           </div>
 
           {/* Card 2: Featured Work Quick Glance */}
-          <div className="relative rounded-xl border border-line/80 bg-card/80 p-4 backdrop-blur-xl transition-all duration-300 hover:border-accent/40">
+          <div className="group relative rounded-xl border border-line/80 bg-card/80 p-4 backdrop-blur-xl transition-all duration-300 hover:border-accent/50 hover:shadow-[0_12px_28px_-12px_rgba(108,140,255,0.2)] w-full min-w-0">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent/10 border border-accent/25 text-accent font-mono text-xs font-bold">
+              <div className="flex items-center gap-3 min-w-0 flex-1 pr-2">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 border border-accent/25 text-accent font-mono text-xs font-bold">
                   01
                 </div>
-                <div>
-                  <div className="text-[13px] font-medium text-fg">Enterprise & Client Deliveries</div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-[13px] font-medium text-fg truncate">Enterprise & Client Deliveries</div>
                   <div className="text-[11px] text-muted">From zero-to-one architecture to scalable deployment</div>
                 </div>
               </div>

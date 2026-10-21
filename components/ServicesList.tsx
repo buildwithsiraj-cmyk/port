@@ -122,7 +122,7 @@ export function ServicesList({ services }: { services: Service[] }) {
                 onPointerLeave={(e) => e.pointerType === "mouse" && setActive(null)}
                 onFocus={() => setActive(i)}
                 onBlur={() => setActive(null)}
-                className="relative flex min-h-[88px] w-full items-start gap-4 overflow-hidden rounded-[12px] border border-line bg-[#12151A] px-5 py-5 text-left sm:gap-5 sm:px-6"
+                className="relative flex min-h-[88px] w-full items-start gap-3.5 sm:gap-5 overflow-hidden rounded-[12px] border border-line bg-[#12151A] px-4 py-4 sm:px-6 sm:py-5 text-left"
               >
                 {isActive && (
                   <motion.span

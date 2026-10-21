@@ -88,7 +88,7 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
         )}
       </PreviewWrap>
 
-      <div className="p-6">
+      <div className="p-4 sm:p-6 min-w-0">
         {(category || tags?.length) && (
           <div className="label mb-3 flex flex-wrap items-center gap-x-3 gap-y-1">
             {category && <span className="text-accent">{category}</span>}
@@ -97,14 +97,14 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
             ))}
           </div>
         )}
-        <h3 className="text-[22px] font-medium leading-snug tracking-[-0.02em]">{titleEl}</h3>
-        {description && <p className="mt-2 text-[14px] leading-[1.7] text-fg2">{description}</p>}
+        <h3 className="text-[20px] sm:text-[22px] font-medium leading-snug tracking-[-0.02em] break-words">{titleEl}</h3>
+        {description && <p className="mt-2 text-[13.5px] sm:text-[14px] leading-[1.7] text-fg2">{description}</p>}
 
         <div className="relative z-10 mt-5 flex flex-wrap gap-2">
           <a
             href={projectHref}
             aria-label={`View project details for ${title}`}
-            className="inline-flex h-11 items-center gap-1.5 rounded-lg bg-accent px-4 text-[14px] font-medium text-bg transition-colors duration-150 hover:bg-[#8aa3ff]"
+            className="inline-flex h-10 sm:h-11 items-center gap-1.5 rounded-lg bg-accent px-3.5 sm:px-4 text-[13px] sm:text-[14px] font-medium text-bg transition-colors duration-150 hover:bg-[#8aa3ff]"
           >
             View Project Details <ArrowUpRight size={15} aria-hidden />
           </a>
@@ -114,7 +114,7 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Visit live website for ${title} (opens in new tab)`}
-              className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line px-4 text-[14px] font-medium text-fg2 transition-colors duration-150 hover:border-accent hover:text-accent"
+              className="inline-flex h-10 sm:h-11 items-center gap-1.5 rounded-lg border border-line px-3.5 sm:px-4 text-[13px] sm:text-[14px] font-medium text-fg2 transition-colors duration-150 hover:border-accent hover:text-accent"
             >
               Live Site <ArrowUpRight size={14} aria-hidden />
             </a>
@@ -125,7 +125,7 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${title} source code on GitHub (opens in new tab)`}
-              className="inline-flex h-11 items-center gap-1.5 rounded-lg border border-line px-4 text-[14px] font-medium text-fg2 transition-colors duration-150 hover:border-accent hover:text-accent"
+              className="inline-flex h-10 sm:h-11 items-center gap-1.5 rounded-lg border border-line px-3.5 sm:px-4 text-[13px] sm:text-[14px] font-medium text-fg2 transition-colors duration-150 hover:border-accent hover:text-accent"
             >
               <Github size={15} aria-hidden /> Code
             </a>

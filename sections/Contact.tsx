@@ -30,14 +30,14 @@ export function Contact() {
               Interested in my work or want to collaborate on something interesting? Get in touch directly, or customize your project requirements below.
             </p>
           </Reveal>
-          <Reveal className="lg:col-span-6 lg:col-start-7" delay={0.1}>
-            <ul className="grid gap-3 sm:grid-cols-2">
+          <Reveal className="w-full min-w-0 lg:col-span-6 lg:col-start-7" delay={0.1}>
+            <ul className="grid gap-3 sm:grid-cols-2 w-full min-w-0">
               {items.map(({ href, label, detail, icon: Icon, external }) => (
-                <li key={label}>
+                <li key={label} className="w-full min-w-0">
                   <a
                     href={href}
                     aria-label={external ? `${label} (opens in a new tab)` : `${label}: ${detail}`}
-                    className="group flex min-h-[72px] items-center gap-4 rounded-[12px] border border-line px-5 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/50 hover:bg-accent/[0.05] focus-visible:border-accent/60 focus-visible:outline-none"
+                    className="group flex min-h-[72px] w-full min-w-0 items-center gap-3.5 sm:gap-4 rounded-[12px] border border-line px-4 sm:px-5 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/50 hover:bg-accent/[0.05] focus-visible:border-accent/60 focus-visible:outline-none"
                     {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   >
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line text-fg2 transition-colors duration-300 group-hover:border-accent/50 group-hover:text-accent">

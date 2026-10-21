@@ -78,25 +78,34 @@ export function Navigation() {
           {portfolio.wordmark}
         </a>
 
-        <ul className="hidden items-center gap-8 sm:flex">
-          {links.map((l) => (
-            <li key={l.id}>
-              <a
-                href={`#${l.id}`}
-                aria-current={active === l.id ? "true" : undefined}
-                className={`text-[14px] font-medium transition-colors duration-200 hover:text-fg ${
-                  active === l.id ? "text-accent" : "text-fg2"
-                }`}
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
+        <ul className="hidden items-center gap-1 sm:flex">
+          {links.map((l) => {
+            const isActive = active === l.id;
+            return (
+              <li key={l.id} className="relative">
+                <a
+                  href={`#${l.id}`}
+                  aria-current={isActive ? "true" : undefined}
+                  className={`relative px-3.5 py-1.5 rounded-lg text-[14px] font-medium transition-all duration-200 ${
+                    isActive ? "text-fg" : "text-fg2 hover:text-fg hover:bg-white/[0.04]"
+                  }`}
+                >
+                  {isActive && (
+                    <span
+                      aria-hidden
+                      className="absolute inset-0 rounded-lg bg-accent/10 border border-accent/25 -z-10 transition-all duration-300"
+                    />
+                  )}
+                  {l.label}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         <button
           type="button"
-          className="-mr-2 flex h-11 w-11 items-center justify-center text-fg sm:hidden"
+          className="-mr-2 flex h-11 w-11 items-center justify-center text-fg rounded-lg transition-transform active:scale-95 sm:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobile-menu"
@@ -109,7 +118,7 @@ export function Navigation() {
       {open && (
         <div
           id="mobile-menu"
-          className="absolute inset-x-0 top-[72px] border-b border-line bg-bg/95 backdrop-blur-md sm:hidden"
+          className="absolute inset-x-0 top-[72px] border-b border-line bg-bg/95 backdrop-blur-md sm:hidden animate-in fade-in slide-in-from-top-2 duration-200"
         >
           <ul className="container-x flex flex-col py-2">
             {links.map((l) => (
@@ -117,8 +126,8 @@ export function Navigation() {
                 <a
                   href={`#${l.id}`}
                   onClick={() => setOpen(false)}
-                  className={`flex h-14 items-center text-[16px] font-medium ${
-                    active === l.id ? "text-accent" : "text-fg"
+                  className={`flex h-14 items-center text-[16px] font-medium transition-colors ${
+                    active === l.id ? "text-accent" : "text-fg hover:text-accent"
                   }`}
                 >
                   {l.label}
