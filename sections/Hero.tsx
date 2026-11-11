@@ -5,7 +5,6 @@ import { motion, MotionConfig } from "motion/react";
 import { useReducedMotionSafe } from "@/lib/useReducedMotionSafe";
 import { registerGsap, MQ } from "@/lib/animations/gsap";
 import { portfolio } from "@/data/portfolio";
-import { HeroPortrait } from "@/components/HeroPortrait";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 
 const EASE_OUT = [0.22, 1, 0.36, 1] as const;
@@ -48,12 +47,22 @@ export function Hero() {
 
     mm.add(MQ.desktop, () => {
       scrollLinked();
-      // Soft pointer response for the ambient light (fine pointers only)
+      // Soft pointer response for the ambient light (fine pointers only, throttled to RAF)
       if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
         const gx = gsap.quickTo(glowA.current, "x", { duration: 1.6, ease: "power3.out" });
-        const onMove = (e: PointerEvent) => gx((e.clientX / window.innerWidth - 0.5) * -36);
+        let rafId: number | null = null;
+        const onMove = (e: PointerEvent) => {
+          if (rafId !== null) return;
+          rafId = requestAnimationFrame(() => {
+            gx((e.clientX / window.innerWidth - 0.5) * -36);
+            rafId = null;
+          });
+        };
         window.addEventListener("pointermove", onMove, { passive: true });
-        return () => window.removeEventListener("pointermove", onMove);
+        return () => {
+          if (rafId !== null) cancelAnimationFrame(rafId);
+          window.removeEventListener("pointermove", onMove);
+        };
       }
     });
     mm.add(MQ.tablet, scrollLinked);
@@ -208,7 +217,7 @@ export function Hero() {
           >
             <div>
               <div className="font-mono text-lg sm:text-2xl font-bold text-fg">
-                <AnimatedCounter target={8} suffix="+" />
+                <AnimatedCounter target={portfolio.projects.length} suffix="+" />
               </div>
               <div className="text-[11px] sm:text-[12px] text-muted leading-tight mt-0.5">Production Apps</div>
             </div>

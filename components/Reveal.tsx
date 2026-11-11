@@ -33,6 +33,7 @@ export function Reveal({
           delay,
           ease: EASE,
           scrollTrigger: { trigger: el, start: "top 88%", once: true },
+          clearProps: "transform",
         }
       );
     });

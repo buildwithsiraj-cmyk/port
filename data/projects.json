@@ -78,25 +78,6 @@
     ]
   },
   {
-    "slug": "makeup-studio-mua",
-    "title": "Makeup Studio MUA",
-    "demo": "https://makeupstudiomua.netlify.app/",
-    "category": "Website",
-    "description": "Website for a bridal makeup artist based in Anna Nagar, Chennai.",
-    "overview": "A refined aesthetic website designed for a bridal makeup studio in Anna Nagar, Chennai. Showcases bridal looks, engagement packages, masterclasses, and an appointment booking flow.",
-    "features": [
-      "Bridal, reception, and pre-wedding makeover galleries",
-      "Service packages and bridal party consultation requests",
-      "Client makeover testimonials and direct WhatsApp consultation"
-    ],
-    "technologies": ["HTML5", "Tailwind CSS", "JavaScript", "Netlify"],
-    "screenshots": [
-      { "url": "/projects/makeup-studio-mua/desktop-home.webp", "alt": "Makeup Studio MUA Homepage", "type": "desktop", "title": "Bridal Artistry & Studio Hero" },
-      { "url": "/projects/makeup-studio-mua/desktop-features.webp", "alt": "Makeup Studio MUA Services", "type": "desktop", "title": "Bridal Packages & Portfolio" },
-      { "url": "/projects/makeup-studio-mua/mobile-home.webp", "alt": "Makeup Studio MUA Mobile", "type": "mobile", "title": "Mobile Bridal Booking View" }
-    ]
-  },
-  {
     "slug": "apex-epoxy-solutions",
     "title": "Apex Epoxy Solutions",
     "demo": "https://apexepoxysolutions.netlify.app/",
@@ -136,23 +117,68 @@
   },
   {
     "slug": "gym-crm",
-    "title": "Gym CRM",
+    "title": "Aura",
     "demo": "https://gymcrm.buildwithsiraj.workers.dev/",
     "category": "Web App",
-    "description": "Gym CRM and management suite covering members, leads pipeline, workout protocols, nutrition and billing.",
-    "overview": "A comprehensive cloud management platform built for gym owners, personal trainers, and fitness studios. Handles member lifecycle tracking, automated follow-up leads pipeline, attendance logging, and recurring subscription fees.",
+    "description": "Enterprise gym CRM and fitness management suite with executive cockpit, leads pipeline, athlete companion, and physio rehab.",
+    "overview": "Aura is an all-in-one cloud management and fitness operations platform built for gym owners, personal trainers, physiotherapists, and athletes. It provides real-time executive revenue cockpits, visual Kanban sales pipelines, athlete biometric tracking, daily workout protocols, and clinical kinetic rehabilitation records.",
     "features": [
-      "Member management directory with subscription status tracking",
-      "Sales pipeline for new membership inquiries and trial passes",
-      "Billing, dues tracking, and automated renewal notifications",
-      "Trainer assignment and workout protocol logging"
+      "Executive Control Center with revenue velocity & member conversion metrics",
+      "Visual CRM Kanban leads pipeline with automated trial pass workflows",
+      "Member roster directory with biometrics, payments, and retention risk indicators",
+      "Aura Fitness Companion athlete portal for daily workouts and nutrition macros",
+      "Sports rehabilitation & kinetic mobility clinic assessment portal"
     ],
     "technologies": ["React", "TypeScript", "Tailwind CSS", "Cloudflare Workers"],
     "screenshots": [
-      { "url": "/projects/gym-crm/manager-cockpit.webp", "alt": "Gym Manager Cockpit Dashboard - Floor metrics & live check-ins", "type": "desktop", "title": "Gym Manager Cockpit" },
-      { "url": "/projects/gym-crm/member-roster.webp", "alt": "Member Roster & CRM - Biometrics, memberships, renewals & payment states", "type": "desktop", "title": "Member Roster & CRM" },
-      { "url": "/projects/gym-crm/coach-portal.webp", "alt": "Master Coach Portal - PT sessions, coaching notes & athlete rosters", "type": "desktop", "title": "Master Coach Portal" },
-      { "url": "/projects/gym-crm/physio-portal.webp", "alt": "Sports Physiotherapist Portal - Clinical assessment, kinetic mobility & rehab cases", "type": "desktop", "title": "Physiotherapist Portal" }
+      { "url": "/projects/gym-crm/desktop-home.webp", "alt": "Aura Elite Performance Club CRM - Sign-in & Executive Workspace Access", "type": "desktop", "title": "Aura Elite Portal" },
+      { "url": "/projects/gym-crm/manager-cockpit.webp", "alt": "Aura Executive Control Center - Gross revenue, member metrics & lead funnel", "type": "desktop", "title": "Executive Control Center" },
+      { "url": "/projects/gym-crm/leads-pipeline.webp", "alt": "Aura CRM & Leads Pipeline - Kanban sales board with outreach workflows", "type": "desktop", "title": "CRM & Leads Pipeline" },
+      { "url": "/projects/gym-crm/member-roster.webp", "alt": "Aura Member Roster & CRM - Biometrics, memberships, renewals & retention", "type": "desktop", "title": "Member Roster & CRM" },
+      { "url": "/projects/gym-crm/athlete-companion.webp", "alt": "Aura Fitness Companion - Athlete hub, daily workouts & macro tracking", "type": "desktop", "title": "Aura Fitness Companion" },
+      { "url": "/projects/gym-crm/physio-portal.webp", "alt": "Aura Sports Physiotherapist Portal - Clinical assessment & active recovery", "type": "desktop", "title": "Sports Physio & Rehab Portal" }
+    ]
+  },
+  {
+    "slug": "astonish-beauty",
+    "title": "Astonish Beauty",
+    "size": 6,
+    "demo": "https://astonishbeauty.buildwithsiraj.workers.dev/",
+    "category": "Website",
+    "description": "Luxury makeup artistry and professional beauty academy website based in Ajah, Lagos.",
+    "overview": "A bespoke digital showcase for Astonish Beauty, an elite bridal artistry and beauty education studio in Ajah, Lagos. The platform highlights bespoke bridal transformations, traditional cultural wedding looks, masterclasses, and an appointment consultation booking pipeline.",
+    "features": [
+      "Bespoke bridal & traditional wedding makeup showcase",
+      "Professional hands-on beauty academy curriculum & registration",
+      "Direct WhatsApp booking and consultation inquiries",
+      "Interactive studio location details & customer testimonials"
+    ],
+    "technologies": ["React", "Tailwind CSS", "Cloudflare Workers", "Vite"],
+    "screenshots": [
+      { "url": "/projects/astonish-beauty/desktop-home.webp", "alt": "Astonish Beauty Homepage", "type": "desktop", "title": "Luxury Bridal Artistry Hero" },
+      { "url": "/projects/astonish-beauty/desktop-features.webp", "alt": "Astonish Beauty Services & Academy", "type": "desktop", "title": "Bridal Packages & Academy Training" },
+      { "url": "/projects/astonish-beauty/mobile-home.webp", "alt": "Astonish Beauty Mobile View", "type": "mobile", "title": "Mobile Responsive Booking" }
+    ]
+  },
+  {
+    "slug": "safora-bridal-studio",
+    "title": "Safora Bridal Studio",
+    "size": 6,
+    "demo": "https://saforabridalstudio.buildwithsiraj.workers.dev/",
+    "category": "Website",
+    "description": "Website for a professional bridal makeup, hair styling & saree draping studio in Urapakkam, Chennai.",
+    "overview": "A dedicated digital presence for Safora Bridal Makeup Artist, led by senior artist Kavitha in Urapakkam West, Chennai. Specializing in Muhurtham bridal transformations, engagement & reception makeovers, saree draping, and direct appointment bookings.",
+    "features": [
+      "Muhurtham, reception & engagement bridal makeover showcases",
+      "Traditional saree draping, hair styling & poola jada services",
+      "Client review gallery and four-step bridal experience workflow",
+      "Direct WhatsApp and phone consultation booking integration"
+    ],
+    "technologies": ["React", "Tailwind CSS", "Cloudflare Workers", "Vite"],
+    "screenshots": [
+      { "url": "/projects/safora-bridal-studio/desktop-home.webp", "alt": "Safora Bridal Studio Homepage", "type": "desktop", "title": "Bridal Artistry & Studio Hero" },
+      { "url": "/projects/safora-bridal-studio/desktop-features.webp", "alt": "Safora Bridal Studio Services", "type": "desktop", "title": "Bridal Packages & Portfolio" },
+      { "url": "/projects/safora-bridal-studio/mobile-home.webp", "alt": "Safora Bridal Studio Mobile", "type": "mobile", "title": "Mobile Bridal Consultation View" }
     ]
   }
 ]

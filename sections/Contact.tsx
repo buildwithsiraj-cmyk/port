@@ -2,7 +2,6 @@ import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import { InstagramIcon, LinkedinIcon } from "@/components/icons";
 import { portfolio } from "@/data/portfolio";
 import { Reveal } from "@/components/Reveal";
-import { ProjectBuilder } from "@/sections/ProjectBuilder";
 
 type Icon = React.ComponentType<{ size?: number; className?: string; "aria-hidden"?: boolean }>;
 type Item = { href: string; label: string; detail: string; icon: Icon; external: boolean };
@@ -22,12 +21,12 @@ export function Contact() {
       <div aria-hidden className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full"
         style={{ background: "radial-gradient(closest-side, rgba(108,140,255,0.10), transparent 70%)" }} />
       <div className="container-x relative">
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-center mb-16 lg:mb-20">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
           <Reveal className="lg:col-span-5">
             <p className="label mb-4">03 — Contact</p>
             <h2 id="contact-title" className="h-section">Have something in mind? Let&apos;s build it.</h2>
             <p className="mt-4 max-w-[460px] text-fg2">
-              Interested in my work or want to collaborate on something interesting? Get in touch directly, or customize your project requirements below.
+              Interested in my work or want to collaborate on something interesting? Get in touch directly.
             </p>
           </Reveal>
           <Reveal className="w-full min-w-0 lg:col-span-6 lg:col-start-7" delay={0.1}>
@@ -54,9 +53,6 @@ export function Contact() {
             </ul>
           </Reveal>
         </div>
-
-        {/* Interactive Estimator nested cleanly within the Contact section */}
-        <ProjectBuilder />
       </div>
     </section>
   );

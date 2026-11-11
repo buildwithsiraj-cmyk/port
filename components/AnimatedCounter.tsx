@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useReducedMotionSafe } from "@/lib/useReducedMotionSafe";
 
 export function AnimatedCounter({
@@ -12,20 +12,21 @@ export function AnimatedCounter({
   suffix?: string;
   duration?: number;
 }) {
-  const [value, setValue] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const reduce = useReducedMotionSafe();
 
   useEffect(() => {
-    if (reduce) {
-      setValue(target);
-      return;
-    }
-
     const el = ref.current;
     if (!el) return;
 
+    if (reduce) {
+      el.textContent = `${target}${suffix}`;
+      return;
+    }
+
     let hasStarted = false;
+    let rafId: number;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting && !hasStarted) {
@@ -36,15 +37,19 @@ export function AnimatedCounter({
             const progress = Math.min(elapsed / duration, 1);
             // Ease-out cubic
             const easedProgress = 1 - Math.pow(1 - progress, 3);
-            setValue(Math.round(easedProgress * target));
+            const currentVal = Math.round(easedProgress * target);
+
+            if (ref.current) {
+              ref.current.textContent = `${currentVal}${suffix}`;
+            }
 
             if (progress < 1) {
-              requestAnimationFrame(step);
-            } else {
-              setValue(target);
+              rafId = requestAnimationFrame(step);
+            } else if (ref.current) {
+              ref.current.textContent = `${target}${suffix}`;
             }
           };
-          requestAnimationFrame(step);
+          rafId = requestAnimationFrame(step);
           observer.disconnect();
         }
       },
@@ -52,13 +57,15 @@ export function AnimatedCounter({
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
-  }, [target, duration, reduce]);
+    return () => {
+      observer.disconnect();
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, [target, duration, suffix, reduce]);
 
   return (
     <span ref={ref} aria-label={`${target}${suffix}`}>
-      {value}
-      {suffix}
+      0{suffix}
     </span>
   );
 }

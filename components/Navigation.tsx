@@ -16,10 +16,22 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 24);
+          if (window.scrollY < 200) {
+            setActive("");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -33,12 +45,7 @@ export function Navigation() {
       { rootMargin: "-45% 0px -50% 0px" }
     );
     els.forEach((el) => io.observe(el));
-    const onTop = () => window.scrollY < 200 && setActive("");
-    window.addEventListener("scroll", onTop, { passive: true });
-    return () => {
-      io.disconnect();
-      window.removeEventListener("scroll", onTop);
-    };
+    return () => io.disconnect();
   }, []);
 
   useEffect(() => {

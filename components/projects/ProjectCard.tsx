@@ -29,11 +29,9 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
     const invalidate = () => { rect.current = null; };
     update();
     mq.addEventListener("change", update);
-    window.addEventListener("scroll", invalidate, { passive: true });
     window.addEventListener("resize", invalidate, { passive: true });
     return () => {
       mq.removeEventListener("change", update);
-      window.removeEventListener("scroll", invalidate);
       window.removeEventListener("resize", invalidate);
     };
   }, []);
@@ -76,7 +74,7 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
             src={image}
             alt={imageAlt ?? `${title} screenshot`}
             fill
-            sizes="(min-width: 1024px) 1200px, (min-width: 640px) 90vw, 100vw"
+            sizes="(min-width: 1280px) 600px, (min-width: 1024px) 50vw, (min-width: 640px) 50vw, 100vw"
             priority={priority}
             loading={priority ? undefined : "lazy"}
             className="object-cover transition-transform duration-[400ms] ease-out lg:group-hover:scale-[1.04]"
