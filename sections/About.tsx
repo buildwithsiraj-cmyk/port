@@ -5,7 +5,6 @@ import { Reveal } from "@/components/Reveal";
 import { ServicesList } from "@/components/ServicesList";
 
 export function About() {
-  const { profileImage, about, aboutCta, services, name } = portfolio;
   const { profileImage, about, aboutCta, services, name, business } = portfolio;
   return (
     <section id="about" aria-labelledby="about-title" className="relative section-y border-t border-line overflow-clip">

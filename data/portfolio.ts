@@ -54,7 +54,6 @@ export type Portfolio = {
   /** Portrait shown in the hero (path under /public) */
   heroPortrait?: string;
   siteUrl?: string;
-  contact: { email?: string; phone?: string; instagram?: string; linkedin?: string };
   contact: {
     email?: string;
     phone?: string;
@@ -74,7 +73,6 @@ export const portfolio: Portfolio = {
   intro:
     "I'm Siraj KS, a developer working across Generative AI, data engineering, and full-stack development. This is a collection of my work.",
   about:
-    "I help businesses strengthen their digital presence, reach the right audience, and turn more opportunities into customers through modern websites, AI-powered solutions, and digital automation.",
     "Through my agency Build With Siraj, I help businesses strengthen their digital presence, reach the right audience, and turn more opportunities into customers through modern websites, AI-powered solutions, and digital automation.",
   aboutCta:
     "If you're looking to grow your business, let's connect and explore how we can work together.",

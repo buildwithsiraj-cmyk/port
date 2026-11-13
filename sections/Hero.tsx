@@ -290,7 +290,6 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Card 2: Featured Work Quick Glance */}
           {/* Card 2: Featured Work & Agency Quick Glance */}
           <div className="group relative rounded-xl border border-line/80 bg-card/80 p-4 backdrop-blur-xl transition-all duration-300 hover:border-accent/50 hover:shadow-[0_12px_28px_-12px_rgba(108,140,255,0.2)] w-full min-w-0">
             <div className="flex items-center justify-between">
@@ -299,18 +298,10 @@ export function Hero() {
                   01
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="text-[13px] font-medium text-fg truncate">Enterprise & Client Deliveries</div>
-                  <div className="text-[11px] text-muted">From zero-to-one architecture to scalable deployment</div>
                   <div className="text-[13px] font-medium text-fg truncate">{portfolio.business.name} · Client Deliveries</div>
                   <div className="text-[11px] text-muted truncate">Zero-to-one engineering &amp; agency solutions</div>
                 </div>
               </div>
-              <a
-                href="#work"
-                className="font-mono text-[11px] text-accent hover:underline inline-flex items-center gap-1"
-              >
-                View Works <span>→</span>
-              </a>
               <div className="flex items-center gap-2.5 shrink-0">
                 <a
                   href="#work"
