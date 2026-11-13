@@ -291,6 +291,7 @@ export function Hero() {
           </div>
 
           {/* Card 2: Featured Work Quick Glance */}
+          {/* Card 2: Featured Work & Agency Quick Glance */}
           <div className="group relative rounded-xl border border-line/80 bg-card/80 p-4 backdrop-blur-xl transition-all duration-300 hover:border-accent/50 hover:shadow-[0_12px_28px_-12px_rgba(108,140,255,0.2)] w-full min-w-0">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3 min-w-0 flex-1 pr-2">
@@ -300,6 +301,8 @@ export function Hero() {
                 <div className="min-w-0 flex-1">
                   <div className="text-[13px] font-medium text-fg truncate">Enterprise & Client Deliveries</div>
                   <div className="text-[11px] text-muted">From zero-to-one architecture to scalable deployment</div>
+                  <div className="text-[13px] font-medium text-fg truncate">{portfolio.business.name} · Client Deliveries</div>
+                  <div className="text-[11px] text-muted truncate">Zero-to-one engineering &amp; agency solutions</div>
                 </div>
               </div>
               <a
@@ -308,6 +311,22 @@ export function Hero() {
               >
                 View Works <span>→</span>
               </a>
+              <div className="flex items-center gap-2.5 shrink-0">
+                <a
+                  href="#work"
+                  className="font-mono text-[11px] text-muted hover:text-fg hover:underline hidden sm:inline-block"
+                >
+                  Works ↓
+                </a>
+                <a
+                  href={portfolio.business.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded bg-accent/10 px-2 py-0.5 font-mono text-[10px] text-accent border border-accent/20 hover:bg-accent/20 transition-colors inline-flex items-center gap-1"
+                >
+                  Agency <span>↗</span>
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>

@@ -180,5 +180,26 @@
       { "url": "/projects/safora-bridal-studio/desktop-features.webp", "alt": "Safora Bridal Studio Services", "type": "desktop", "title": "Bridal Packages & Portfolio" },
       { "url": "/projects/safora-bridal-studio/mobile-home.webp", "alt": "Safora Bridal Studio Mobile", "type": "mobile", "title": "Mobile Bridal Consultation View" }
     ]
+  },
+  {
+    "slug": "malik-hair-point",
+    "title": "Malik Hair Point",
+    "size": 12,
+    "demo": "https://malikhairpoint.netlify.app/",
+    "category": "Website",
+    "description": "Luxury men's grooming & barbering atelier website based in Urapakkam, Chennai.",
+    "overview": "A refined digital presence crafted for MALIK Hair Saloon in Urapakkam, Chennai. The experience showcases bespoke scissor fades, architectural beard sculpting, straight-razor hot towel therapies, client lookbooks, and an instant chair reservation flow.",
+    "features": [
+      "Bespoke haircuts, fades & architectural beard sculpting showcases",
+      "Traditional straight-razor hot towel shave & scalp therapies",
+      "The Gentleman's Lookbook and client transformation gallery",
+      "Direct WhatsApp booking and online chair reservation pipeline"
+    ],
+    "technologies": ["HTML5", "Modern CSS", "JavaScript", "Netlify"],
+    "screenshots": [
+      { "url": "/projects/malik-hair-point/desktop-home.webp", "alt": "Malik Hair Point Homepage", "type": "desktop", "title": "Grooming & Barbering Atelier Hero" },
+      { "url": "/projects/malik-hair-point/desktop-features.webp", "alt": "Malik Hair Point Services & Lookbook", "type": "desktop", "title": "Crafted Services & Combos" },
+      { "url": "/projects/malik-hair-point/mobile-home.webp", "alt": "Malik Hair Point Mobile View", "type": "mobile", "title": "Mobile Chair Reservation View" }
+    ]
   }
 ]

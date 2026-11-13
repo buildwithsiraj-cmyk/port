@@ -40,6 +40,13 @@ export type Portfolio = {
   about: string;
   /** Closing line under the About intro */
   aboutCta: string;
+  /** Business agency details */
+  business: {
+    name: string;
+    url: string;
+    domain: string;
+    description: string;
+  };
   /** Services list shown in About — edit freely */
   services: { title: string; description: string }[];
   /** Optional: provide a real image under /public to show it in About */
@@ -48,6 +55,13 @@ export type Portfolio = {
   heroPortrait?: string;
   siteUrl?: string;
   contact: { email?: string; phone?: string; instagram?: string; linkedin?: string };
+  contact: {
+    email?: string;
+    phone?: string;
+    instagram?: string;
+    linkedin?: string;
+    website?: string;
+  };
   projects: Project[];
 };
 
@@ -61,8 +75,15 @@ export const portfolio: Portfolio = {
     "I'm Siraj KS, a developer working across Generative AI, data engineering, and full-stack development. This is a collection of my work.",
   about:
     "I help businesses strengthen their digital presence, reach the right audience, and turn more opportunities into customers through modern websites, AI-powered solutions, and digital automation.",
+    "Through my agency Build With Siraj, I help businesses strengthen their digital presence, reach the right audience, and turn more opportunities into customers through modern websites, AI-powered solutions, and digital automation.",
   aboutCta:
     "If you're looking to grow your business, let's connect and explore how we can work together.",
+  business: {
+    name: "Build With Siraj",
+    url: "https://buildwithsiraj.online",
+    domain: "buildwithsiraj.online",
+    description: "Web Development, AI Solutions & Digital Automation",
+  },
   services: [
     {
       title: "Website & Web App Development",
@@ -94,6 +115,7 @@ export const portfolio: Portfolio = {
     phone: "+919176619665",
     instagram: "https://www.instagram.com/buildwithsiraj_/",
     linkedin: "https://www.linkedin.com/in/sirajuddin-ks/",
+    website: "https://buildwithsiraj.online",
   },
   // Edit data/projects.json to add/remove projects. Screenshot: /projects/<slug>.webp (run `npm run capture -- <slug>`).
   projects: (projectData as ProjectEntry[]).map((p) => ({
