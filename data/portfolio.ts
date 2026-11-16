@@ -106,8 +106,8 @@ export const portfolio: Portfolio = {
   ],
   profileImage: undefined,
   heroPortrait: undefined,
-  // Set to your real domain once deployed, e.g. "https://example.com"
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || undefined,
+  // Set to your real domain once deployed, e.g. "https://buildwithsiraj.online"
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://buildwithsiraj.online",
   contact: {
     email: "buildwithsiraj@gmail.com",
     phone: "+919176619665",

@@ -14,12 +14,20 @@ const title = "Siraj KS | Gen AI Engineer, Data Engineer & Full Stack Developer"
 const description =
   "Explore Siraj KS's portfolio of work across Generative AI, data engineering, and full-stack development.";
 
+const siteUrl = portfolio.siteUrl || "https://buildwithsiraj.online";
+
 export const metadata: Metadata = {
-  metadataBase: portfolio.siteUrl ? new URL(portfolio.siteUrl) : undefined,
+  metadataBase: new URL(siteUrl),
   title,
   description,
-  alternates: portfolio.siteUrl ? { canonical: "/" } : undefined,
-  openGraph: { title, description, type: "website", siteName: portfolio.name },
+  alternates: { canonical: "/" },
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    siteName: portfolio.name,
+    url: siteUrl,
+  },
   twitter: { card: "summary", title, description },
   icons: { icon: "/icon.svg" },
 };
